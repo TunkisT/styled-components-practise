@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import * as S from './Toggle.style';
 
 function Toggle({ children }) {
-  let type = false;
+  const [toggle, setToggle] = useState(true);
+  console.log('toggle ===', toggle);
+
   return (
     <S.ToggleEl>
-      <S.Toggle onClick={type === !type}>
+      <S.Toggle onClick={() => setToggle(!toggle)} toggle={toggle}>
         <S.Bubble />
       </S.Toggle>
       {children}
@@ -15,7 +17,6 @@ function Toggle({ children }) {
 }
 
 Toggle.propTypes = {
-  color: PropTypes.node.isRequired,
   children: PropTypes.node.isRequired,
 };
 

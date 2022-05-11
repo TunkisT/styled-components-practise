@@ -6,9 +6,6 @@ export default {
   component: Accordion,
 };
 
-export const primary = () => (
-  <Accordion
-    title='Section 1 title'
-    text='lorem ipsum latus peris ja kuti lamusi j hyger'
-  />
-);
+export const Default = () => {
+  return <Accordion title='Demo123' content='text text text' />;
+};

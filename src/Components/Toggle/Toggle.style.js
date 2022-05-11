@@ -7,8 +7,8 @@ export const ToggleEl = styled.span`
 export const Toggle = styled.span`
   cursor: pointer;
   background: green;
-  padding: ${({ type }) =>
-    type ? '0.6rem 2rem 0.6rem 0.5rem' : '0.6rem 0.5rem 0.6rem 2rem'};
+  padding: ${({ toggle }) =>
+    toggle ? '0.6rem 2rem 0.6rem 0.5rem' : '0.6rem 0.5rem 0.6rem 2rem'};
   border-radius: 1rem;
 `;
 
