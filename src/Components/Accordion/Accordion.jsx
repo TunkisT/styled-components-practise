@@ -11,6 +11,9 @@ function Accordion({ title, text }) {
   );
 }
 
-Accordion.propTypes = {};
+Accordion.propTypes = {
+  title: PropTypes.node.isRequired,
+  text: PropTypes.node.isRequired,
+};
 
 export default Accordion;

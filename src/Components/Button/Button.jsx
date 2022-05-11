@@ -16,6 +16,7 @@ Button.propTypes = {
   type: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  handleClick: PropTypes.func,
 };
 
 export default Button;
