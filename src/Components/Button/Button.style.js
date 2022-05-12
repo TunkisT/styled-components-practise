@@ -1,8 +1,10 @@
 import styled from 'styled-components';
-export const ButtonEl = styled.button`
-  background: ${({ color }) => (color ? color : 'white')};
-  color: whitesmoke;
-  border: none;
-  font-size: 1.5rem;
-  padding: 1.5rem 5rem 1.5rem 1rem;
+
+export const Button = styled.button`
+  background: ${(props) => (props.color === 'primary' ? 'cyan' : 'grey')};
+  border: 0;
+  color: #fff;
+  padding: 1rem;
+  min-width: 10rem;
+  text-align: left;
 `;

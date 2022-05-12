@@ -1,22 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ButtonEl } from './Button.style';
+import * as S from './Button.style';
 
-const handleClick = '';
-
-function Button({ type, color, children }) {
+const Button = ({ color, type, children, onClick }) => {
   return (
-    <ButtonEl color={color} type={type} onClick={handleClick}>
+    <S.Button color={color} type={type} onClick={onClick}>
       {children}
-    </ButtonEl>
+    </S.Button>
   );
-}
+};
 
 Button.propTypes = {
-  type: PropTypes.string.isRequired,
-  color: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-  handleClick: PropTypes.func,
+  color: PropTypes.oneOf(['primary', 'secondary']),
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
+  children: PropTypes.string.isRequired,
+  onClick: PropTypes.func,
+};
+
+Button.defaultProps = {
+  color: 'secondary',
+  type: 'button',
 };
 
 export default Button;
